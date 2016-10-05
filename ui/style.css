@@ -1,7 +1,7 @@
 body 	{
 	margin: 0;
 	padding: 0;
-	background: green url('/ui/sidebg.png')no-repeat top center;
+	background: green url('/ui/sidebg.png') no-repeat top center;
 	font: 400 1.0em arial,sans-serif;
 	color: #211000;
 	}
