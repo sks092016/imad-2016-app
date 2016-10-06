@@ -127,10 +127,10 @@ var htmlTemplate =
 					<div id="sidebar">
 						  <h4>Achivements and Key Skills</h4>
 						  <ul class="null">
-							<li><a href="/default">${subhead1}</a></li>
-							<li><a href="/default">${subhead2}</a></li>
-							<li><a href="/default">${subhead3}</a></li>
-							<li><a href="/default">${subhead4}</a></li>
+							<li><a href="/mypage">${subhead1}</a></li>
+							<li><a href="/mypage">${subhead2}</a></li>
+							<li><a href="/mypage">${subhead3}</a></li>
+							<li><a href="/mypage">${subhead4}</a></li>
 						  </ul>
 					</div>
 				</div>
@@ -177,14 +177,15 @@ var htmlTemplate =
 		</body>
 
 	</html>`;
-return htmlTemplate ;
+	
+	return htmlTemplate ;
+
 } ;
 
-var defTemplate = function() {
+function defTemplate() {
 	
-	var defTemplate = 
-		`
-		<!DOCTYPE html>
+var defTemplate = 
+	`<!DOCTYPE html>
 		<html>
 			<head>
 				
@@ -194,9 +195,10 @@ var defTemplate = function() {
 				<h1>Sorry !!! Folks the page is under contruction. We will meet you soon. "Bye"</h1>
 				</div>
 			</body>
-		</html> `	 ;
+		</html> `;
 	
-	return defTemplate ;
+return defTemplate ;
+	
 } ;
 
 app.get('/', function (req, res) {
@@ -220,7 +222,7 @@ app.get('/ui/tcillogo.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'tcillogo.png'));
 });
 
-app.get('/default', function (req, res) {
+app.get('/mypage', function (req, res) {
   res.send(defTemplate());
 });
 
