@@ -134,7 +134,7 @@ var htmlTemplate =
 						<li><a href="/">Present Employer</a></li>
 						<li><a href="/college">Collage</a></li>
 						<li><a href="/schooling">Schooling</a></li>
-						<li><a href="/details">Personal Details</a></li>
+						<li><a href="/perDetails">Personal Details</a></li>
 					  </ul>
 					</div>
 					
