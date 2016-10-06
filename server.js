@@ -20,7 +20,7 @@ var mainData = {
         subhead1 : "High School",
         subhead2 : "Matriculation",
         subhead3 : "Academics Achivement",
-        subhead4 : "Sports",
+        subhead4 : "Sports"
          
      },
  
@@ -43,7 +43,7 @@ var mainData = {
         subhead1 : "Final Academics",
         subhead2 : "Technical Certificates",
         subhead3 : "Academics Achivement",
-        subhead4 : "Sports",
+        subhead4 : "Sports" 
          
      },
         
@@ -84,12 +84,13 @@ var mainData = {
         subhead1 : "Family Background",
         subhead2 : "Family Occupation",
         subhead3 : "Relatives",
-        subhead4 : "Business",
+        subhead4 : "Business"
          
-     },
+     }
         
     
-}
+} ;
+
 function createTemplate(content) {
 
 var title = content.title ;
@@ -99,9 +100,15 @@ var heading2 = content.heading2;
 var heading3 = content.heading3;
 var heading4 = content.heading4;
 
-var about1 = content.about1
-var about2 = content.about2
-var about3 = content.about3
+var about1 = content.about1 ;
+var about2 = content.about2 ;
+var about3 = content.about3 ;
+
+var subhead1 = content.subhead1 ;
+var subhead2 = content.subhead2 ;
+var subhead3 = content.subhead3 ;
+var subhead4 = content.subhead4 ;
+
 
 var htmlTemplate = 
 	`<!DOCTYPE html>
