@@ -127,10 +127,10 @@ var htmlTemplate =
 					<div id="sidebar">
 						  <h4>Achivements and Key Skills</h4>
 						  <ul class="null">
-							<li><a href="http://all-free-download.com/free-website-templates/">${subhead1}</a></li>
-							<li><a href="http://jigsaw.w3.org/css-validator/check/referer">${subhead2}</a></li>
-							<li><a href="http://validator.w3.org/check?uri=referer">${subhead3}</a></li>
-							<li><a href="http://all-free-download.com/free-website-templates/">${subhead4}</a></li>
+							<li><a href="/default">${subhead1}</a></li>
+							<li><a href="/default">${subhead2}</a></li>
+							<li><a href="/default">${subhead3}</a></li>
+							<li><a href="/default">${subhead4}</a></li>
 						  </ul>
 					</div>
 				</div>
@@ -178,7 +178,26 @@ var htmlTemplate =
 
 	</html>`;
 return htmlTemplate ;
-} 
+} ;
+
+var defTemplate = function() {
+	
+	var defTemplate = 
+		`
+		<!DOCTYPE html>
+		<html>
+			<head>
+				
+			</head>
+			<body>
+				<div>
+				<h1>Sorry !!! Folks the page is under contruction. We will meet you soon. "Bye"</h1>
+				</div>
+			</body>
+		</html> `	 ;
+	
+	return defTemplate ;
+} ;
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -201,6 +220,9 @@ app.get('/ui/tcillogo.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'tcillogo.png'));
 });
 
+app.get('/default', function (req, res) {
+  res.send(defTemplate());
+});
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
