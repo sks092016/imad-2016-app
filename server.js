@@ -178,7 +178,8 @@ app.get('/', function (req, res) {
 });
 
 app.get('/:contentName', function (req, res) {
-  res.send(createTemplate(mainData(contentName)));
+  var contentName = req.params.contentName ;
+  res.send(createTemplate(mainData[contentName]));
 });
 
 app.get('/ui/style.css', function (req, res) {
