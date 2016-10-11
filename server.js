@@ -205,6 +205,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+app.get('/mypage', function (req, res) {
+  res.send(defTemplate());
+});
+
 app.get('/:contentName', function (req, res) {
   var contentName = req.params.contentName ;
   res.send(createTemplate(mainData[contentName]));
@@ -222,9 +226,7 @@ app.get('/ui/tcillogo.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'tcillogo.png'));
 });
 
-app.get('/mypage', function (req, res) {
-  res.send(defTemplate());
-});
+
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
