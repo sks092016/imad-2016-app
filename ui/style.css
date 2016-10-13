@@ -189,7 +189,7 @@ span.big {
 /*Main Content*/
 
 .entry {
-	background: #ECDB96 url('images/corner.jpg') no-repeat top left;
+	background: #ECDB96 ;
 	margin: 20px 20px 0 0;
 	padding: 12px;
 	border-style: solid;
@@ -224,126 +224,17 @@ img.right {
     max-height: 100px;
 	}
 
-
-p.quote {
-	padding-left: 20px;
-	font: 400 1.2em garamond,georgia,'times new romans',serif;
-	background: #ECDB96 url('images/quote.jpg') no-repeat top left;
-	}
-	
-.comment {
+/*#input{
+	height:140px ;
+	width :260px ;
+	text-wrap : true ;
+}*/
+#count {
 	display: block;
-	padding: 5px;
-	font-size: 0.6em;
-	background-color: #2D1A06;
-	color: #FFD57A;
-	text-align: right;
-	}
-
-.comment a {
-	color: #FFD57A;
-	text-decoration: none;
-	}
-
-.comment a:hover {
-	text-decoration: underline;
-	}
+	font: 400 1.5em 'Times New Romans';
+	color: #FF3399;
+	font-weight:bolder ;
 	
-form label{
-	display:block;
 	}
 
-form input.text, form textarea{
-	width:375px;
-	border:1px #87764B solid;
-	color:#211000;
-	padding:4px 5px;
-	font:12px Verdana,Arial,san-serif;
-	background-color: #F6EDCB;
-	}
-
-form input.text:hover, form textarea:hover{
-	border:1px #87764B solid;
-	}
-
-form input.text:focus, form textarea:focus{
-	border:1px #2D1A06 solid;
-	color:#211000;
-	}
-
-form input.button{
-	margin-right:8px;
-	padding:3px 5px;
-	font:12px Verdana,Arial,san-serif;
-	}
-
-* html form input.text,
-
-* html form textarea{
-	border-color:#533a18;
-	color:#333;
-	}
-
-.links {
-	list-style-type: none;
-	width: 210px;
-	margin: 0 0 0 0;
-	padding: 0 10px 30px 10px;
-	background: #2D1A06 url('images/footcorner.jpg') no-repeat top left;
-	}
-
-.linksright {
-	float: right;
-	width: 210px;
-	margin-left: 35px;
-	padding: 0 10px 30px 10px;
-	list-style-type: none;
-	background: #2D1A06 url('images/footcorner.jpg') no-repeat top left;
-	}
-	
-.linksright li {
-	display: inline;
-	margin: 0px;
-	padding: 0px;
-	list-style-type: none;
-	font-size: 0.7em;
-	}
-
-.linksright li a {
-	padding: 4px;
-	display: block;
-	margin:  0;
-	color: #BD9A56;
-	text-decoration:none;
-	background-color: #2D1A06;
-	border-bottom: 1px solid #211000;
-	}
-
-.linksright li a:hover {
-	background-color: #211000;
-	color:#FEEDA4;
-	}
-
-.links li {
-	display: inline;
-	margin: 0px;
-	padding: 0px;
-	list-style-type: none;
-	font-size: 0.7em;
-	}
-
-.links li a {
-	padding: 4px;
-	display: block;
-	margin:  0;
-	color: #BD9A56;
-	text-decoration:none;
-	background-color: #2D1A06;
-	border-bottom: 1px solid #211000;
-	}
-
-.links li a:hover {
-	background-color: #211000;
-	color:#FEEDA4;
-	}
 

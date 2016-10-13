@@ -209,6 +209,22 @@ app.get('/mypage', function (req, res) {
   res.send(defTemplate());
 });
 
+var counter = 0 ;
+app.get('/counter', function (req, res) {
+  counter = counter + 1; 
+  res.send(counter.toString());
+});
+
+var names = [] ;
+app.get('/submit-name', function (req, res) { 
+  //we request at the url /submit-name/"any name" so whatever comes after /submit-name is converted to variable if we use ":var name " as we have used it earlier in html templating we now use a query parameter which is same as this but the name will be extracted after the url query such as //submit-name?name = "XXXX" here XXXX will be our query param and it can be extracted as JS object
+  var name = req.query.name ;
+  // we inserted a new value submitted on client side to our server array 
+  names.push(name) ;
+  // since JS objects can not be sent directly as it is we have to use JSON lib to convert JS objects to renderable string 
+  res.send(JSON.stringify(names));
+});
+
 app.get('/:contentName', function (req, res) {
   var contentName = req.params.contentName ;
   res.send(createTemplate(mainData[contentName]));
@@ -226,7 +242,9 @@ app.get('/ui/tcillogo.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'tcillogo.png'));
 });
 
-
+app.get('/ui/main.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
+});
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
